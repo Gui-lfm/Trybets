@@ -14,8 +14,10 @@ public class MatchController : Controller
     }
 
     [HttpGet("{MatchFinished}")]
-    public IActionResult Get(bool MatchFinished)
+    public IActionResult Get([FromRoute] bool MatchFinished)
     {
-        throw new NotImplementedException();
+        var response = _repository.Get(MatchFinished);
+
+        return Ok(response);
     }
 }
