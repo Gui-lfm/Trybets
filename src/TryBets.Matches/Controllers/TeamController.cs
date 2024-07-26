@@ -18,6 +18,15 @@ public class TeamController : Controller
     [HttpGet]
     public IActionResult Get()
     {
-        throw new NotImplementedException();
+        try
+        {
+            var response = _repository.Get();
+            return Ok(response);
+        }
+        catch (Exception e)
+        {
+            
+            return StatusCode(500, new { message = e.Message });
+        }
     }
 }
