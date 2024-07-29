@@ -13,8 +13,6 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryBets.Odds", "TryBets.Odd
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryBets.Users", "TryBets.Users\TryBets.Users.csproj", "{4F24A707-DB59-4EC8-80C8-619FA667657F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TryBets.Test.Test", "TryBets.Test.Test\TryBets.Test.Test.csproj", "{E8896AC4-94BB-4C5D-A64A-CC42A8195EFB}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
