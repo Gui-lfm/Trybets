@@ -36,6 +36,8 @@ public class BetController : Controller
             }
 
             var response = _repository.Post(request, email);
+            await _oddService.UpdateOdd(response.MatchId, response.TeamId, response.BetValue);
+            
             return Created("", response);
         }
         catch (Exception e)

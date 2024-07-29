@@ -47,18 +47,6 @@ public class BetRepository : IBetRepository
         .Include(b => b.Match)
         .Where(b => b.BetId == newBet.BetId).FirstOrDefault()!;
 
-        if (match.MatchTeamAId == betRequest.TeamId)
-        {
-            match.MatchTeamAValue += betRequest.BetValue;
-        }
-        else
-        {
-            match.MatchTeamBValue += betRequest.BetValue;
-        }
-
-        _context.Matches.Update(match);
-        _context.SaveChanges();
-
         BetDTOResponse betResponse = new()
         {
             BetId = createdBet.BetId,
